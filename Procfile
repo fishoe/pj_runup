@@ -1,1 +1,1 @@
-web: gunicorn team8_project.wsgi --log-file -
+web: gunicorn AI_team8.wsgi --log-file -
