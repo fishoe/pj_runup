@@ -10,8 +10,8 @@ def index(request):
 
     cnt = 0
 
-    if not Product.objects.filter(prod_id=cnt).exists():
-        get_dataset()
+    #if not Product.objects.filter(prod_id=cnt).exists():
+        #get_dataset()
     #if not Similarity.objects.filter(target_prod=0).exists():
         # get_similarity_W_T_()
         # get_similarity_M_T_()
