@@ -10,13 +10,20 @@ def index(request):
 
     cnt = 0
 
-    #if not Product.objects.filter(prod_id=cnt).exists():
-        #get_dataset()
-    #if not Similarity.objects.filter(target_prod=0).exists():
-        # get_similarity_W_T_()
-        # get_similarity_M_T_()
-        # get_similarity_M_B_()
-        # get_similarity_W_B_()
+    if not Product.objects.filter(prod_id=cnt).exists():
+        print("==================start")
+        get_dataset()
+        print("==================dataset_done_0")
+    if not Similarity.objects.filter(target_prod=0).exists():
+        print("==================Similarity")
+        get_similarity_W_T_()
+        print("==================dataset_done_1")
+        get_similarity_M_T_()
+        print("==================dataset_done_2")
+        get_similarity_M_B_()
+        print("==================dataset_done_3")
+        get_similarity_W_B_()
+        print("==================dataset_done_4")
 
 
     answer=request.POST.getlist('check')

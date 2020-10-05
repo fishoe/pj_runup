@@ -5,15 +5,15 @@ class Product(models.Model):
     prod_id = models.CharField(primary_key=True, max_length=10)
     link = models.URLField()
     gender = models.CharField(max_length=10)
-    category = models.CharField(max_length=10)
+    category = models.CharField(max_length=50)
     image = models.URLField()
-    brand = models.CharField(max_length=10)
-    price = models.CharField(max_length=10)
+    brand = models.CharField(max_length=50)
+    price = models.CharField(max_length=50)
 
 
 class Similarity(models.Model):
-    target_prod = models.CharField(max_length=10)
-    sim_prod = models.CharField(max_length=10)
+    target_prod = models.CharField(max_length=50)
+    sim_prod = models.CharField(max_length=50)
     similarity = models.FloatField()
 
     @property
