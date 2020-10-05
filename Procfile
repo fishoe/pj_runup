@@ -1,1 +1,1 @@
-web: gunicorn deploy_project.wsgi --log-file -
+web: gunicorn RunUPproject.wsgi --log-file -
