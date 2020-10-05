@@ -1,0 +1,102 @@
+*{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    font-size: 10px;
+}
+
+html{    
+    width: 100%;
+    display: flex;
+    flex-direction: column ;    
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column ;    
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.logo_a{
+    width: 60%;
+}
+.logo_img{
+    width: 100%;
+}
+
+.wrap{
+    width: 100%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_bar{
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    /* box-shadow: 0px 0spx 10px 0px gray; */
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 3px;
+}
+
+
+.content{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.check{
+    display: flex;
+    flex-direction: column;
+}
+.survey{
+    width: 190px;
+    margin: 5px;
+}
+.search{
+    width: 80px;
+}
+.fix>a{
+    font-size: xx-small;
+}

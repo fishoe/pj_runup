@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'recommendapp/layout.css' %}"/>
+    <link rel="stylesheet" type="text/css" media = "(max-width: 480px)" href="{% static 'recommendapp/mobile_layout.css' %}"/>
+    <link rel="icon" href="data:,">
+    {%block style%}
+    {%endblock%}
+</head>
+<body>
+    {% comment %} 헤더 {% endcomment %}
+    <div class="header">
+        <a href="{% url 'index' %}" class="logo_a">
+            <img src="{% static 'recommendapp/logo.png'%}" alt="logo" class="logo_img">  
+        </a> 
+        {% block header%}
+        {% endblock %}
+
+    </div>
+
+    <div class='wrap'>
+        {% comment %} 메뉴바 {% endcomment %}
+        <div class="menu_bar">
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+
+                {% comment %} <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
+                <label for="toggle-on" class="btn">Man</label>
+                <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
+                <label for="toggle-off" class="btn">Woman</label> {% endcomment %}
+
+                <div class='check'>
+                    <div class="option">
+                        <input type="checkbox" name="check" id='w' value="Woman" >
+                        <label for='w'>WOMEN</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="check" id='m' value="Man">
+                        <label for='m'>MEN</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="check" id='t' value="top">
+                        <label for='t'>TOP</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="check" id='b' value="bottoms">
+                        <label for='b'>BOTTOM</label>
+                    </div>
+                </div>
+
+                <br><button type='submit' class='search'>SEARCH</button><br><br>
+                <button class="survey" style="vertical-align:middle" onClick="window.open('https://docs.google.com/forms/d/1zUAyFs_ccWdzpw4kJ8jTk-ZM818KEHhvA5aJ7GDtg54/edit?ts=5f79b709&gxids=7757')"><span>설문조사</span></button>    
+                <button class="fix" style="vertical-align:middle" onClick="window.open('https://docs.google.com/forms/d/1zUAyFs_ccWdzpw4kJ8jTk-ZM818KEHhvA5aJ7GDtg54/edit?ts=5f79b709&gxids=7757')"><span>FIX</span><br><a>오류는 여기로!</a></button>
+            </form>
+        </div>
+        
+        {% comment %} 메인콘텐츠 {% endcomment %}
+        <div class="content">
+            {%block content%}
+            {%endblock%}
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>created by TEAM8</h2>
+    </div>
+    
+    
+    
+</body>
+</html>
+

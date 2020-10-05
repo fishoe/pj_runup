@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+
+{% load static %}
+{% block style%}
+    <link rel="stylesheet" type="text/css" href="{% static 'recommendapp/index.css' %}"/>
+    <link rel="stylesheet" type="text/css" media = "(max-width: 480px)" href="{% static 'recommendapp/mobile_index.css' %}"/>
+    {% endblock %}
+
+{% block header%}
+    
+{% endblock %}
+
+{% block content %}
+    
+    {% for prod in prod_object%}
+        <div class ='box'>
+            <div class='img_box'>
+                <a href="{% url 'sub' prod.pk%}">
+                    <img src="{{prod.image}}" alt="image" class="image">                        
+                </a>
+            </div>
+            <div class='info'>
+                <b>{{prod.brand}}</b>
+                <div class='price'>
+                    {{prod.price}}원
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
