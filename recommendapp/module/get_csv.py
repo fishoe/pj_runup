@@ -6,7 +6,7 @@ import sys
 
 def get_dataset():
     cnt = 0
-    with open('RunUP_dataset/final_W_B.csv',encoding='UTF-8') as csvfile:
+    with open('../RunUP_dataset/final_W_B.csv',encoding='UTF-8') as csvfile:
         rdr = csv.DictReader(csvfile)
         for i in rdr:
             Product.objects.create(prod_id=cnt,link=i['href'],gender=i['gender'],category=i['type'],image=i['image'],brand=i['brand_name'],price=i['price'])
@@ -28,7 +28,7 @@ def get_dataset():
     #         cnt+=1
 
 def get_similarity_W_B_():
-    for input_file in glob.glob(os.path.join('RunUP_dataset/W_B_similarity/','W_B_*')):
+    for input_file in glob.glob(os.path.join('../RunUP_dataset/W_B_similarity/','W_B_*')):
             #print(os.path.basename(input_file))
         with open(input_file,encoding='UTF-8') as csvfile:
             rdr = csv.DictReader(csvfile)
