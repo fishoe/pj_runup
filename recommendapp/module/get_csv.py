@@ -9,10 +9,7 @@ def get_dataset():
     with open('RunUP_dataset/final_W_B.csv',encoding='UTF-8') as csvfile:
         rdr = csv.DictReader(csvfile)
         for i in rdr:
-            Product.objects.create(prod_id=cnt,link=i['href'],
-            gender=i['gender'],category=i['type'],
-            image=i['image'],brand=i['brand_name'],
-            price=i['price'])
+            Product.objects.create(prod_id=cnt,link=i['href'],gender=i['gender'],category=i['type'],image=i['image'],brand=i['brand_name'],price=i['price'])
             cnt+=1
     with open('RunUP_dataset/final_M_B.csv',encoding='UTF-8') as csvfile:
         rdr = csv.DictReader(csvfile)
@@ -24,7 +21,7 @@ def get_dataset():
         for i in rdr:
             Product.objects.create(prod_id=cnt,link=i['href'],gender=i['gender'],category=i['type'],image=i['image'],brand=i['brand_name'],price=i['price'])
             cnt+=1
-    with open('RunUP_dataset/final_W_T.csv',encoding='UTF-8') as csvfile:
+    with open('RunUP_dataset/final_W_T.csv',encoding='UTF-8', errors='ignore') as csvfile:
         rdr = csv.DictReader(csvfile)
         for i in rdr:
             Product.objects.create(prod_id=cnt,link=i['href'],gender=i['gender'],category=i['type'],image=i['image'],brand=i['brand_name'],price=i['price'])
