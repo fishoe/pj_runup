@@ -4,6 +4,8 @@ from recommendapp.module.get_csv import get_dataset, get_similarity_W_T_, get_si
 gender_list = ['M','W']
 type_list = ['TOP','BOTTOM']
 
+
+
 def index(request):        
     import random
     from random import shuffle
