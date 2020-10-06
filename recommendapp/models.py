@@ -3,10 +3,10 @@ from django.contrib.auth.models import User
 
 class Product(models.Model):
     prod_id = models.CharField(primary_key=True, max_length=500)
-    link = models.URLField()
+    link = models.URLField(max_length=500)
     gender = models.CharField(max_length=500)
     category = models.CharField(max_length=500)
-    image = models.URLField()
+    image = models.URLField(max_length=500)
     brand = models.CharField(max_length=500)
     price = models.CharField(max_length=500)
 
