@@ -8,7 +8,7 @@ class Product(models.Model):
     category = models.CharField(max_length=500)
     image = models.URLField(max_length=500)
     brand = models.CharField(max_length=500)
-    price = models.CharField(max_length=500)
+    price = models.IntegerField()
 
 
 class Similarity(models.Model):
