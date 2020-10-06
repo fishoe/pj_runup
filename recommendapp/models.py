@@ -2,18 +2,18 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Product(models.Model):
-    prod_id = models.CharField(primary_key=True, max_length=10)
+    prod_id = models.CharField(primary_key=True, max_length=500)
     link = models.URLField()
-    gender = models.CharField(max_length=10)
-    category = models.CharField(max_length=50)
+    gender = models.CharField(max_length=500)
+    category = models.CharField(max_length=500)
     image = models.URLField()
-    brand = models.CharField(max_length=50)
-    price = models.CharField(max_length=50)
+    brand = models.CharField(max_length=500)
+    price = models.CharField(max_length=500)
 
 
 class Similarity(models.Model):
-    target_prod = models.CharField(max_length=50)
-    sim_prod = models.CharField(max_length=50)
+    target_prod = models.CharField(max_length=500)
+    sim_prod = models.CharField(max_length=500)
     similarity = models.FloatField()
 
     @property
