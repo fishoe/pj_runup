@@ -8,22 +8,21 @@ def index(request):
     import random
     from random import shuffle
 
-    cnt = 0
 
-    if not Product.objects.filter(prod_id=cnt).exists():
+    if not Product.objects.filter(prod_id=0).exists():
         print("==================start")
         get_dataset()
         print("==================dataset_done_0")
     if not Similarity.objects.filter(target_prod=0).exists():
         print("==================Similarity")
-        get_similarity_W_T_()
-        print("==================dataset_done_1")
-        get_similarity_M_T_()
-        print("==================dataset_done_2")
-        get_similarity_M_B_()
-        print("==================dataset_done_3")
         get_similarity_W_B_()
-        print("==================dataset_done_4")
+        # print("==================dataset_done_1")
+        # get_similarity_M_B_()
+        # print("==================dataset_done_2")
+        # get_similarity_M_T_()
+        # print("==================dataset_done_3")
+        # get_similarity_W_B_()
+        # print("==================dataset_done_4")
 
 
     answer=request.POST.getlist('check')
