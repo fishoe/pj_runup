@@ -105,3 +105,4 @@ Werkzeug==0.15.4
 whitenoise==5.2.0
 wrapt==1.12.1
 zipp==3.1.0
+psycopg2==2.6.2
