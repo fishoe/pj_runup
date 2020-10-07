@@ -76,11 +76,24 @@ WSGI_APPLICATION = 'RunUPproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+import dj_database_url
+
+...
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+
+...
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'team8_database',
+        'USER': 'team8',
+        'PASSWORD': 'dla13579!!',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
@@ -125,6 +138,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 
 # Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)

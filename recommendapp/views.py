@@ -23,7 +23,7 @@ def index(request):
         print("==================dataset_done_2")
         get_similarity_M_T_()
         print("==================dataset_done_3")
-        get_similarity_W_B_()
+        get_similarity_W_T_()
         print("==================dataset_done_4")
 
 
