@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'team8_database',
         'USER': 'team8',
         'PASSWORD': 'dla13579!!',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '5432'
     }
 }
