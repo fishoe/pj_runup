@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'team8_database',
         'USER': 'team8',
         'PASSWORD': 'dla13579!!',
-        'HOST': 'localhost',
+        'HOST': 'team8-project-2',
         'PORT': '5432'
     }
 }
