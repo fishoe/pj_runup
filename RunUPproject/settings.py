@@ -78,13 +78,9 @@ WSGI_APPLICATION = 'RunUPproject.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 import dj_database_url
 
-...
-
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
-
-...
 
 DATABASES = {
     'default': {
