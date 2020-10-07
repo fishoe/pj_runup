@@ -9,7 +9,7 @@ type_list = ['TOP','BOTTOM']
 def index(request):        
     import random
     from random import shuffle
-
+    print('conn')
 
     if not Product.objects.filter(prod_id=0).exists():
         print("==================start")
