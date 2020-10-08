@@ -85,10 +85,10 @@ ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'team8_database',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'dla13579!!',
-        'HOST': '192.168.1.6',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
         'PORT': '5432'
     }
 }
